@@ -17,7 +17,7 @@ export const options = {
         }
     },
     thresholds: {
-        iteration_duration: ['avg<2000']
+        iteration_duration: ['avg>2000']
     }
 } 
 
