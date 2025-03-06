@@ -4,22 +4,23 @@ on:
   push:
     branches: main
 
-job:
-  - runs-on: ubuntu-latest
-  - k6demo:
-    - name: 'checkout to main'
-      uses: actions/checkout@v2
-      with:
-        ref: main
-    - name: 'install k6'
-      uses: grafana/setup-k6-actions@v1
-      with:
-        k6-version: '0.52.0'
-    - name: 'run k6 test'
-      run: bash run_k6.sh
-    - name: 'Upload artifact'
-      uses: actions/upload-artifact@v1.4.4
-      with:
-        name: 'k6 reports'
-        path: './reports/report.html'
-    
+jobs:
+    k6demo:
+      runs-on: ubuntu-latest
+      steps: 
+        - name: 'checkout to main'
+          uses: actions/checkout@v2
+          with:
+            ref: main
+        - name: 'install k6'
+          uses: grafana/setup-k6-actions@v1
+          with:
+            k6-version: '0.52.0'
+        - name: 'run k6 test'
+          run: bash run_k6.sh
+        - name: 'Upload artifact'
+          uses: actions/upload-artifact@v1.4.4
+          with:
+            name: 'k6 reports'
+            path: './reports/report.html'
+        
