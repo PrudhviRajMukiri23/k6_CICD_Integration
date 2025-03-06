@@ -4,9 +4,9 @@ on:
   push:
     branches: main
 
-jobs:
-  runs-on: ubuntu-latest
-  k6demo:
+job:
+  - runs-on: ubuntu-latest
+  - k6demo:
     - name: 'checkout to main'
       uses: actions/checkout@v2
       with:
