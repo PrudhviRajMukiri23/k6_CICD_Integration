@@ -16,11 +16,12 @@ jobs:
       uses: grafana/setup-k6-action@v1
       with:
         k6-version: '0.52.0'
-    # - name: 'run k6 test'
-    #   uses: grafana/run-k6-action@v1
-    #   with:
-    #     path: K6_browser.js
-    - run: k6 run K6_browser.js --quiet
+    - name: 'run k6 test'
+      uses: grafana/run-k6-action@v1
+      with:
+        path: K6_browser.js
+      env:
+        K6_BROWSER_HEADLESS: true
     - name: 'Upload artifact'
       uses: actions/upload-artifact@v4.4.3
       with:
