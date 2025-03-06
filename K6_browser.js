@@ -33,7 +33,7 @@ export default async function () {
     })
 
     await page.close()
-
+    await browser.close()
     sleep(1)
 }
 
