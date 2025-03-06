@@ -18,6 +18,8 @@ jobs:
         k6-version: '0.52.0'
     - name: 'run k6 test'
       uses: grafana/run-k6-action@v1
+      with:
+        path: K6_browser.js
     - name: 'Upload artifact'
       uses: actions/upload-artifact@v4.4.3
       with:
