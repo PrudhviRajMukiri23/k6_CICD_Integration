@@ -6,6 +6,8 @@ on:
 
 jobs:
   k6_demo: 
+    runs-on: ubuntu-latest
+    steps:
     - name: 'checkout to main'
       uses: actions/checkout@v2
       with:
