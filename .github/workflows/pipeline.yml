@@ -4,7 +4,7 @@ on:
   push:
     branches: main
 
-job:
+jobs:
   k6_demo: 
     - name: 'checkout to main'
       uses: actions/checkout@v2
