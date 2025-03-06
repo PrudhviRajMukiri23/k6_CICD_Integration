@@ -15,7 +15,7 @@ jobs:
     - name: 'install k6'
       uses: grafana/setup-k6-action@v1
       with:
-        k6-version: 'latest'
+        k6-version: '0.47.0'
     - name: 'run k6 test'
       run: bash run_k6.sh
     - name: 'Upload artifact'
