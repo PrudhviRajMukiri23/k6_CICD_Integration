@@ -20,5 +20,5 @@ jobs:
       uses: actions/upload-artifact@v1.4.4
       with:
         name: 'k6 reports'
-        path: './reports/report.html'
+        path: './reports'
     
