@@ -32,6 +32,8 @@ export default async function () {
         "check value: ": v => v === "Google",
     })
 
+    await page.close()
+
     sleep(1)
 }
 
