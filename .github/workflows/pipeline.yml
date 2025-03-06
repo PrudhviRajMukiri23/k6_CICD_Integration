@@ -5,7 +5,7 @@ on:
     branches: main
 
 jobs:
-  k6_demo: 
+  k6demo: 
     - name: 'checkout to main'
       uses: actions/checkout@v2
       with:
